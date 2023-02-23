@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WearWhat</title>
-
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
        
@@ -17,6 +17,7 @@
         text-align: center;
         background-color: #333333;
         color: white;  
+       
     }
     .left{
          display: flex;
@@ -81,17 +82,15 @@
         border: none;
         
     }
-    #nav3{
-        /* position: sticky; */
-       
-    }
+   
+  
     #nav3 div{
         display: flex;
        justify-content: space-evenly;
        margin-left: 40px;
        margin-right: 40px;
     }
-    #nav3 div a{
+    #nav3 div select{
         color: black;
         text-decoration: none;
         font-weight: 600;
@@ -99,6 +98,12 @@
         text-align: center;
         padding-top: 10px;
         padding-bottom: 10px;
+        border: none;
+    }
+    #nav3 div select option{
+     width: 400px;
+     box-sizing: border-box;
+     background-color:White;
     }
     .upper1{
     background-image: url("https://eddiebauer.scene7.com/is/image/EBContent/230213_hp_promo?$a8$");
@@ -257,6 +262,7 @@
    #footermain{
     width: 100%;
 background-color: #f5f5f5;
+margin-top: 20px;
 
    }
    
@@ -337,9 +343,44 @@ background-color: #f5f5f5;
         width: 90%;
         color: darkgray;
     }
+
+    .base{ 
+        display: flex;
+       justify-content: space-between;
+    }
+    .base>div{
+        width: 20%;
+        height: 20px;
+        display: flex;
+       align-items: center;
+        margin-left: 40px;
+       padding: 20px;
+        
+    }
+    .base>div>img{
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        
+    }
+    .base>div>h5{
+        font-family: 'Pacifico';
+        margin-left:10px;
+        
+    }
+    .base>div>p{
+        color: gray;
+        font-size: small;
+    }
+    button:hover{
+        cursor: pointer;
+    }
     </style>
 </head>
 <body>
+
+    <!-- ------Nav------ -->
+
     <div id="main">
     <div id="nav">
         <div class="left">
@@ -351,11 +392,9 @@ background-color: #f5f5f5;
             </div>
             <div class="right">
                 <a href=""><i class="fa-sharp fa-solid fa-location-dot"></i> Stores</a>
-                <a href=""><i class="fa-solid fa-user"></i> <span> Sign In</span></a>
+                <a href="./signin.html"><i class="fa-solid fa-user"></i> <span> Sign In</span></a>
                 <span> /</span>
-                <a href=""><span>Sing Up</span></a>
-                
-              
+                <a href="./signUp.html"><span>Sing Up</span></a>  
             </div>
         </div>
         <div id="nav2">
@@ -368,7 +407,7 @@ background-color: #f5f5f5;
         
         <div id="nav3">
             <div>
-            <a href="">NEW!</a>
+            <!-- <a href="">NEW!</a>
             <a href="">WOMEN</a>
             <a href="">MEN</a>
             <a href="">KIDS</a>
@@ -379,10 +418,85 @@ background-color: #f5f5f5;
             <a href="">40% OFF SALE</a>
             <a href="">CLEARANCE</a>
             <a href="">RESALE</a>
-            <a href="">GUIDEPOST</a>
+            <a href="">GUIDEPOST</a> -->
+            <select name="" id="">
+                <option value="">NEW!</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">WOMEN</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">MEN</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">KIDS</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">OUTERWEAR</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">GEAR</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">FOOTWEAR</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">HOME</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">SALE</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">CLEARANCE</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">RESALE</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
+            <select name="" id="">
+                <option value="">GUIDEPOST</option>
+                <option value="">Shirts</option>
+                <option value="">T-Shirts</option>
+                <option value="">Boots</option>
+            </select>
         </div>
     </div>
     </div>
+
+
+<!-- -----Body---- -->
 
     <div class="upper1">
 <div>
@@ -458,6 +572,10 @@ background-color: #f5f5f5;
         <a href="">Follow Us On TikTok</a>
     </div>
 </div>
+
+
+<!-- -----footer----- -->
+
 <div id="footermain">   
 <div class="top">
     <img src="https://cdn-icons-png.flaticon.com/512/0/619.png" alt="">
@@ -548,10 +666,24 @@ background-color: #f5f5f5;
     <i class="fa-brands fa-twitter"></i>
 </div>
 </div>
-
-
 </div>
 <hr>
+<div class="base">
+    <div>
+        <p>SHOP</p>
+        <img src="https://img.freepik.com/free-icon/united-states-america_318-452242.jpg" alt="">
+        <img src="https://thumbs.dreamstime.com/b/white-maple-leaf-red-background-symbol-canada-emblem-canadian-maple-leaf-depicted-flag-canada-234581218.jpg" alt="">
+        <h5>WearWhat</h5>
+    </div>
+    <div>
+        <p>Session ID #813 667 912</p>
+        <p>© 2023 Eddie Bauer LLC. All Rights Reserved</p>
+    </div>
+    <div>
+        <p>Terms of Use
+            | Sitemap</p>
+    </div>
+    </div>
 </div>
 </body>
 <script>
