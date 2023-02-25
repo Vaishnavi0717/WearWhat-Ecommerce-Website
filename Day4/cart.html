@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      #nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        text-align: center;
+        background-color: #333333;
+        color: white;
+      }
+      .left {
+        display: flex;
+        width: 20%;
+        margin-left: 10px;
+        align-items: center;
+      }
+      .left i {
+        margin-right: 10px;
+      }
+      .middle {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+      }
+      .right {
+        display: flex;
+        width: 20%;
+        align-items: center;
+      }
+      .left > img {
+        width: 20px;
+      }
+
+      .right > a > img {
+        width: 20px;
+        background-color: white;
+      }
+      .right a {
+        display: flex;
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+      .right i {
+        margin-right: 10px;
+      }
+
+      #nav2 {
+        /* position: fixed; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 5px;
+      }
+      .bag a {
+        color: black;
+        margin-right: 10px;
+      }
+
+      #nav2 > div > img {
+        width: 400px;
+        margin-right: 120px;
+      }
+      #nav2 > div > button {
+        width: 50px;
+        background: none;
+        border: none;
+      }
+      #nav3 div {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      #nav3 div select {
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+      }
+      #nav3 div select option {
+        width: 400px;
+        box-sizing: border-box;
+        background-color: White;
+      }
+
+      #footermain {
+        width: 100%;
+        background-color: #f5f5f5;
+        margin-top: 20px;
+      }
+
+      .top {
+        width: 100%;
+        display: flex;
+        margin-right: 60px;
+        justify-content: space-around;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .top > div {
+        width: 20%;
+        margin-right: 50px;
+        justify-content: center;
+        line-height: 20px;
+      }
+      .top > div > p {
+        color: grey;
+        font-size: small;
+      }
+      .top > div > h4 {
+        font-size: small;
+        line-height: 15px;
+      }
+
+      .top > img {
+        padding-top: 50px;
+        max-height: 40px;
+        padding-left: 90px;
+        padding-right: 10px;
+      }
+
+      .mid {
+        display: flex;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        height: 270px;
+      }
+
+      .mid > div {
+        display: inline-block;
+        line-height: 20px;
+      }
+      .mid > div > ul {
+        list-style-type: none;
+        color: gray;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: small;
+      }
+      .mid > div > h4 {
+        margin-left: 40px;
+        font-size: small;
+      }
+      .mid > div > div {
+        margin-left: 40px;
+      }
+      .mid > div > button {
+        background-color: #333333;
+        color: white;
+        margin: 10px;
+        margin-left: 40px;
+        padding: 12px;
+        margin-bottom: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-weight: 500;
+        border: 1px solid black;
+      }
+      .mid > div > button:hover {
+        background-color: white;
+        color: black;
+      }
+      hr {
+        width: 90%;
+        color: darkgray;
+      }
+
+      .base {
+        display: flex;
+        justify-content: space-between;
+      }
+      .base > div {
+        width: 20%;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+        padding: 20px;
+      }
+      .base > div > img {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+      }
+      .base > div > h5 {
+        font-family: "Pacifico";
+        margin-left: 10px;
+      }
+      .base > div > p {
+        color: gray;
+        font-size: small;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      #cart-cont {
+        margin-top: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #cart-cont > div {
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        height: 580px;
+        line-height: 15px;
+        width: 35%;
+        margin: auto;
+        padding: 2px;
+      }
+      #cart-cont > div > button {
+        background-color: #333333;
+        color: white;
+        padding: 10px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-weight: 500;
+        border: 1px solid black;
+      }
+      #cart-cont > div > img {
+        width: 300px;
+      }
+      #cart-cont > div > button:hover {
+        background-color: white;
+        color: #333333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ----nav--- -->
+    <div id="main">
+      <div id="nav">
+        <div class="left">
+          <i class="fa-solid fa-bell"></i>
+          <p>Earn Rewards On Purchase</p>
+        </div>
+        <div class="middle">
+          <p>LIMITED TIME! 40% OFF - PRESIDENTS' DAY SALE VIEW ALL OFFERS ></p>
+        </div>
+        <div class="right">
+          <a href=""
+            ><i class="fa-sharp fa-solid fa-location-dot"></i> Stores</a
+          >
+          <a href="./signin.html"
+            ><i class="fa-solid fa-user"></i> <span> Sign In</span></a
+          >
+          <span> /</span>
+          <a href="./signUp.html"><span>Sing Up</span></a>
+        </div>
+      </div>
+      <div id="nav2">
+        <div>
+          <input type="text" /><i
+            class="fa-sharp fa-solid fa-magnifying-glass"
+          ></i>
+        </div>
+        <!-- <button><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button> -->
+        <div>
+          <img src="C:\Users\vaish\Downloads\Untitled design (1).png" alt="" />
+        </div>
+        <div class="bag">
+          <a href="./cart.html"
+            ><i class="fa-sharp fa-solid fa-bag-shopping"></i
+          ></a>
+        </div>
+      </div>
+
+      <div id="nav3">
+        <div>
+          <!-- <a href="">NEW!</a>
+                <a href="">WOMEN</a>
+                <a href="">MEN</a>
+                <a href="">KIDS</a>
+                <a href="">OUTWEAR</a>
+                <a href="">GEAR</a>
+                <a href="">FOOTWEAR</a>
+                <a href="">HOME</a>
+                <a href="">40% OFF SALE</a>
+                <a href="">CLEARANCE</a>
+                <a href="">RESALE</a>
+                <a href="">GUIDEPOST</a> -->
+          <select name="" id="">
+            <option value="">NEW!</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">WOMEN</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">MEN</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">KIDS</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">OUTERWEAR</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">GEAR</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">FOOTWEAR</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">HOME</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">SALE</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">CLEARANCE</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">RESALE</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+          <select name="" id="">
+            <option value="">GUIDEPOST</option>
+            <option value="">Shirts</option>
+            <option value="">T-Shirts</option>
+            <option value="">Boots</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div id="cart-cont"></div>
+
+    <!-- -----footer----- -->
+    <div id="footermain">
+      <div class="top">
+        <img src="https://cdn-icons-png.flaticon.com/512/0/619.png" alt="" />
+        <div>
+          <h4>STORE LOCATOR</h4>
+          <p>Find one of over 250 Eddie Bauer stores in north america</p>
+        </div>
+        <img
+          src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-bell-512.png"
+          alt=""
+        />
+        <div>
+          <h4>ADVENTURE REWARDS</h4>
+          <p>
+            Earn points on every purchase. Sign up today for 500 points towards
+            your first reward!
+          </p>
+        </div>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/5481/5481993.png"
+          alt=""
+        />
+        <div>
+          <h4>VISION STATEMENT</h4>
+          <p>Find one of over 250 Eddie Bauer stores in north america</p>
+        </div>
+      </div>
+      <hr />
+      <div class="mid">
+        <div>
+          <h4>HELP</h4>
+          <ul>
+            <li>Customer Service</li>
+            <li>Track Your Order</li>
+            <li>Return Policy</li>
+            <li>Start A Return</li>
+            <li>Shipping</li>
+            <li>Payment Options</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div>
+          <h4>SHOPPING</h4>
+          <ul>
+            <li>Sign in/Register</li>
+            <li>Adventure Rewards</li>
+            <li>Buy Gift Cards</li>
+            <li>Promos And Coupons</li>
+            <li>Find Your Fit</li>
+            <li>Price Match Policy</li>
+          </ul>
+        </div>
+        <div>
+          <h4>EB CREDIT CARD</h4>
+          <ul>
+            <li>Apply Now</li>
+            <li>Pay My Bill</li>
+          </ul>
+          <h4>VISIT A STORE</h4>
+          <ul>
+            <li>Store Location</li>
+          </ul>
+        </div>
+        <div>
+          <h4>(RE)ADVENTURE</h4>
+          <ul>
+            <li>About</li>
+            <li>Resale</li>
+          </ul>
+        </div>
+        <div>
+          <h4>About US</h4>
+          <ul>
+            <li>Our Story</li>
+            <li>Careers</li>
+            <li>Land Acknowledgement</li>
+            <li>Privacy Policy</li>
+            <li>CA Supply Chain</li>
+            <li>Act</li>
+            <li>Do Not Sell & CPP</li>
+            <li>Do Not Contact Me</li>
+            <li>Accesibility Statement</li>
+          </ul>
+        </div>
+        <div>
+          <h4>BE THE FIRST TO Know</h4>
+          <ul>
+            <li>
+              Earn rewards and be the first to hear about sales and special
+              offers.
+            </li>
+          </ul>
+          <button>SIGN UP</button><br /><br />
+          <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="base">
+        <div>
+          <p>SHOP</p>
+          <img
+            src="https://img.freepik.com/free-icon/united-states-america_318-452242.jpg"
+            alt=""
+          />
+          <img
+            src="https://thumbs.dreamstime.com/b/white-maple-leaf-red-background-symbol-canada-emblem-canadian-maple-leaf-depicted-flag-canada-234581218.jpg"
+            alt=""
+          />
+          <h5>WearWhat</h5>
+        </div>
+        <div>
+          <p>Session ID #813 667 912</p>
+          <p>© 2023 Eddie Bauer LLC. All Rights Reserved</p>
+        </div>
+        <div>
+          <p>Terms of Use | Sitemap</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let commerce = JSON.parse(localStorage.getItem("cloths")) || [];
+    let container = document.getElementById("cart-cont");
+
+    console.log(commerce);
+
+    function displayData(data) {
+      container.innerHTML = null;
+
+      data.forEach((element) => {
+        let product = document.createElement("div");
+
+        let Image = document.createElement("img");
+        Image.setAttribute("src", element.image);
+
+        let Name = document.createElement("H3");
+        Name.textContent = element.name;
+
+        let Price = document.createElement("h4");
+        Price.textContent = `Price:- $${element.price}`;
+
+        let Quantity = document.createElement("h5");
+        Quantity.textContent = "Qty:-" + element.quantity;
+        Quantity.style.margin = "5px";
+
+        let Increament = document.createElement("button");
+        Increament.textContent = "+";
+        Increament.style.backgroundColor = "white";
+        Increament.style.color = "black";
+        Increament.style.padding = "5px";
+        Increament.style.backgroundColor = "white";
+        Increament.style.margin = "2px";
+        Increament.style.borderRadius = "100%";
+        Increament.style.border = "2px solid black";
+
+        let Decreament = document.createElement("button");
+        Decreament.textContent = "-";
+        Decreament.style.backgroundColor = "white";
+        Decreament.style.color = "black";
+        Decreament.style.padding = "5px";
+        Decreament.style.margin = "2px";
+        Decreament.style.borderRadius = "100%";
+        Decreament.style.border = "2px solid black";
+
+        Payment = document.createElement("button");
+        Payment.textContent = "Proceed To Pay";
+        Payment.style.margin = "8px";
+
+        let sum = 0;
+        for (let i = 0; i < commerce.length; i++) {
+          sum += commerce[i].price * commerce[i].quantity;
+        }
+
+        Payment.addEventListener("click", () => {
+            window.location.href = "./payment.html";
+          localStorage.setItem("total-price", sum);
+        });
+
+        let Remove = document.createElement("button");
+        Remove.textContent = "Remove";
+        Remove.style.backgroundColor = "white";
+        Remove.style.color = "black";
+        Remove.style.padding = "5px";
+        Remove.style.margin = "8px";
+        Remove.style.border = "2px solid black";
+
+        Remove.addEventListener("click", () => {
+          commerce = commerce.filter((ele) => {
+            return ele.id !== element.id;
+          });
+          localStorage.setItem("cloths", JSON.stringify(commerce));
+          displayData(commerce);
+        });
+
+        Increament.addEventListener("click", () => {
+          element = element.quantity++;
+          localStorage.setItem("cloths", JSON.stringify(commerce));
+          displayData(commerce);
+        });
+
+        Decreament.addEventListener("click", () => {
+          if (element.quantity > 1) {
+            element = element.quantity--;
+          }
+          localStorage.setItem("cloths", JSON.stringify(commerce));
+          displayData(commerce);
+        });
+
+        let Total = document.createElement("h4");
+        Total.innerText = `Total Price:  $${sum} `;
+        Total.style.margin = "8px";
+
+        product.append(
+          Image,
+          Name,
+          Price,
+          Quantity,
+          Increament,
+          Decreament,
+          Remove,
+          Total,
+          Payment
+        );
+        container.append(product);
+      });
+    }
+
+    displayData(commerce);
+  </script>
+</html>
