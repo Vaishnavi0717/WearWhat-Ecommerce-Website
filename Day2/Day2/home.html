@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WearWhat</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       
+    #nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        text-align: center;
+        background-color: #333333;
+        color: white;  
+       
+    }
+    .left{
+         display: flex;
+         width: 20%;
+         margin-left: 10px;
+         align-items: center;
+    
+    }
+    .left i{
+        margin-right: 10px;
+    }
+    .middle{
+        width: 50%;
+        display: flex;
+       align-items: center;
+       font-family:Arial, Helvetica, sans-serif;
+       font-weight: 400;    
+    }
+    .right{
+         display: flex;
+         width: 20%;
+         align-items: center;     
+    }
+    .left>img{
+        width: 20px;  
+    }
+   
+    .right>a>img{
+        width: 20px;
+      background-color: white;
+    }
+   .right a{
+        display: flex;
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+        
+    }
+   .right i{
+        margin-right: 10px;
+    }
+
+    #nav2{
+        /* position: fixed; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 5px;
+
+    }
+    
+    #nav2>div>img{
+        width: 400px; 
+        margin-right: 120px;   
+       
+    }
+    #nav2>div>button{
+
+        width: 50px;
+        background: none;
+        border: none;
+        
+    }
+   .bag a{
+    color: black;
+    margin-right: 10px;
+   }
+  
+    #nav3 div{
+        display: flex;
+       justify-content: space-evenly;
+       margin-left: 40px;
+       margin-right: 40px;
+    }
+    #nav3 div select{
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+    }
+    #nav3 div select option{
+     width: 400px;
+     box-sizing: border-box;
+     background-color:White;
+    }
+    #nav3 a{
+        color: black;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+    .upper1{
+    background-image: url("https://eddiebauer.scene7.com/is/image/EBContent/230213_hp_promo?$a8$");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    box-sizing: border-box;
+    height: 500px;
+    display: flex;
+    }
+    .upper1>div{
+    text-align: center;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 400px;
+    position: relative;
+    align-items: center;
+    margin-bottom: 0;
+    }
+    .upper1>div>button{
+        background-color: white;
+        border: 1px solid black;
+       margin: 10px;
+       padding: 12px;
+       padding-left: 20px;
+       padding-right: 20px;
+    }
+    .upper1>div>button:hover{
+        background-color: #333333;
+        color:white;
+    }
+    .upper2{
+        background-image: url("https://eddiebauer.scene7.com/is/image/EBContent/230213_hp_rain_V2?$a8$");
+        background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    box-sizing: border-box;
+    height: 500px;
+    display: flex;
+    }
+    .upper2>div{
+    text-align: center;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 400px;
+    position: relative;
+    align-items: center;
+    margin-bottom: 0;
+    margin-left: 20px;
+    }
+    .upper2>div>button{
+        background-color: white;
+        border: 1px solid black;
+       margin: 10px;
+       padding: 12px;
+       margin-bottom: 0;
+       padding-left: 20px;
+       padding-right: 20px;
+    }
+    .upper2>div>button:hover{
+        background-color: #333333;
+        color:white;
+    }
+    .spring{
+        text-align: center;
+        line-height:10px;
+    }
+    .spring p{
+     font-size: larger;
+     line-height:20px;
+    }
+    .three{
+        width: 100%;
+        display: flex;
+    }
+    .three>div{
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .three>div>img{
+        width: 100%;
+    }
+    .three>div>a{
+        color: black;
+        /* font-family: Arial, Helvetica, sans-serif; */
+        margin: 10px;
+        font-size: small;
+        font-weight: 600;
+    }
+    .sale{
+    width: 65%;
+  background-color: #22556c;
+   color: white;
+   height: 90px;
+   text-align: center;
+   padding: 2px;
+   margin-left: 220px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: larger;
+   margin-top: 50px;
+   margin-bottom: 15px;
+    }
+    .btns{
+        width: 50%;
+        margin-left: 350px;
+    }
+    .btns button{
+         background-color: #333333;
+        color: white;
+       margin: 10px;
+       padding: 12px;
+       margin-bottom: 0;
+       padding-left: 20px;
+       padding-right: 20px;
+       font-weight: 500;
+       border: 1px solid black;
+    }
+
+    .btns>button:hover{
+        background-color: white;
+        color: black;
+    }
+    .ocean{
+        background-color: #cde2dd;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-top: 1px;
+        padding-bottom: 10px;
+        line-height: 5px;
+        text-align: center;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .ocean a{
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        font-weight: 600;
+    }
+    .bottom3{
+        width: 100%;
+        display: flex;
+    }
+    .three>div>p{
+        color: grey;
+        font-size: small;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .one{
+ padding: 10px; 
+    }
+   #footermain{
+    width: 100%;
+background-color: #f5f5f5;
+margin-top: 20px;
+
+   }
+   
+.top{
+   width: 100%;
+    display: flex;
+    margin-right: 60px;
+    justify-content: space-around;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.top>div{
+    width: 20%;
+   margin-right: 50px;
+    justify-content: center;
+    line-height: 20px;
+
+    
+}
+.top>div>p{
+    color: grey;
+    font-size: small;
+}
+.top>div>h4{
+    font-size: small;
+    line-height: 15px;
+}
+
+.top>img{
+   
+    padding-top:50px; 
+    max-height: 40px;
+    padding-left:90px;  
+    padding-right: 10px;
+}
+
+.mid{
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 270px;
+
+}
+
+.mid>div{
+     display:inline-block;
+    line-height: 20px;
+}
+.mid>div>ul{
+    list-style-type: none;
+    color: gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+.mid>div>h4{
+ margin-left: 40px;
+ font-size: small;
+}
+.mid>div>div{
+    margin-left: 40px;
+}
+.mid>div>button{
+    background-color: #333333;
+        color: white;
+       margin: 10px;
+       margin-left: 40px;
+       padding: 12px;
+       margin-bottom: 0;
+       padding-left: 40px;
+       padding-right: 40px;
+       font-weight: 500;
+       border: 1px solid black;
+}
+.mid>div>button:hover{
+        background-color: white;
+        color: black;
+    }
+    hr{
+        width: 90%;
+        color: darkgray;
+    }
+
+    .base{ 
+        display: flex;
+       justify-content: space-between;
+    }
+    .base>div{
+        width: 20%;
+        height: 20px;
+        display: flex;
+       align-items: center;
+        margin-left: 40px;
+       padding: 20px;
+        
+    }
+    .base>div>img{
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        
+    }
+    .base>div>h5{
+        font-family: 'Pacifico';
+        margin-left:10px;
+        
+    }
+    .base>div>p{
+        color: gray;
+        font-size: small;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- ------Nav------ -->
+
+    <div id="main">
+    <div id="nav">
+        <div class="left">
+            <i class="fa-solid fa-bell"></i>
+            <p>Earn Rewards On Purchase</p>
+            </div>
+            <div class="middle">
+            <p>LIMITED TIME! 40% OFF - PRESIDENTS' DAY SALE VIEW ALL OFFERS ></p>
+            </div>
+            <div class="right">
+                <a href=""><i class="fa-sharp fa-solid fa-location-dot"></i> Stores</a>
+                <a href="./signin.html"><i class="fa-solid fa-user"></i> <span> Sign In</span></a>
+                <span> /</span>
+                <a href="./signUp.html"><span>Sing Up</span></a>  
+            </div>
+        </div>
+        <div id="nav2">
+        
+            <div><input type="text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+            <!-- <button><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button> -->
+           <div><img src="C:\Users\vaish\Downloads\Untitled design (1).png" alt=""></div> 
+           <div class="bag"><a href="./cart.html"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a></div>
+        </div>
+        
+        <div id="nav3">
+            <div>
+            <a href="./products.html">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">KIDS</a>
+            <a href="">OUTWEAR</a>
+            <a href="">GEAR</a>
+            <a href="">FOOTWEAR</a>
+            <a href="">HOME</a>
+            <a href="">40% OFF SALE</a>
+            <a href="">CLEARANCE</a>
+            <a href="">RESALE</a>
+            <a href="">GUIDEPOST</a>
+           
+        </div>
+    </div>
+    </div>
+
+
+<!-- -----Body---- -->
+
+    <div class="upper1">
+<div>
+    <button>SHOP WOMEN</button>
+    <button>SHOP MEN</button>
+    <button>SHOP KIDS</button>
+    <button>SHOP HOME</button>
+</div>
+    </div>
+    <div class="upper2">
+    <div>
+    <button>SHOP WOMEN</button>
+    <button>SHOP MEN</button>
+    </div>
+    </div>
+   <div class="spring">
+    <h1>Spring Adventure Are Calling</h1>
+    <p>Outfit yourself with tech-enhanced essentials built for superior<br>
+        performance in unpredictable conditions.</p>
+    </div>
+
+<div class="three">
+    <div>
+        <img src="https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_bottoms_V2?$a8$" alt="error">
+        <h3>The most versatile pants & shorts</h3>
+        <a href=""> WOMEN'S BOTTOMS </a>
+        <a href="">MEN'S BOTTOMS </a>
+    </div>
+    <div>
+        <img src="https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_tops_V2?$a8$" alt="error">
+        <h3>The season's best shirts & tees</h3>
+        <a href=""> WOMEN'S TOPS </a>
+        <a href="">MEN'S TOPS </a>
+    </div>
+    <div>
+        <img src="https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_rain_V2?$a8$" alt="error">
+        <h3>Don't let the weather keep you inside</h3>
+        <a href=""> WOMEN'S RAIN </a>
+        <a href="">MEN'S RAIN </a>
+    </div>
+</div>
+<div class="sale">
+<h1>SALE <span>|</span> UP TO 40% </h1>
+</div>
+<div class="btns">
+    <button>SHOP WOMEN</button>
+    <button>SHOP MEN</button>
+    <button>SHOP KIDS</button>
+    <button>SHOP HOME</button>
+</div>
+<div class="ocean">
+<h4>BUY ONLINE, PICK UP IN-STORE</h4>
+<a href="">LEARN MORE</a>
+</div>
+<div class="three">
+    <div class="one">
+        <img src="https://eddiebauer.scene7.com/is/image/EBContent/230131_hp_mrk3box_flyline_V1?$jpg12$&scl=1" alt="error">
+        <h3>Bc Flyline Adaptive Sky Kit</h3>
+        <p>Designing technical gear and apparel for all adventure seekers is a pledge we take seriously, and that’s why we worked with Eddie Bauer guide & professional sit-ski athlete Trevor Kennison to build a one-of-a-kind kit that would make the slopes more accessible for adaptive skiers. We’re proud to announce that this amazing gear won Product of the year at the 4th annual Outdoor Retailer Innovation Awards.
+        </p>
+        <a href="">LEARN MORE </a>
+    </div>
+    <div class="one">
+        <img src="https://eddiebauer.scene7.com/is/image/EBContent/230131_hp_mrk3box_high-fives_V1?$jpg12$&scl=1" alt="error">
+        <h3>High Fives Foundation</h3>
+        <p>Its founder Roy Tuscany suffered spinal cord injury while training to be a professional skier in 2006. The injury left his lower body paralyzed and he was told he would never walk or ski again. Roy received financial support from local skiers, community members, and friends to help with medical and rehabilitation costs that were not covered by his insurance. </p>
+        <a href="">LEARN MORE </a>
+    </div>
+    <div class="one">
+        <img src="https://eddiebauer.scene7.com/is/image/EBContent/221227_hp_mrkt3box_TT_V1?$jpg12$&scl=1" alt="error">
+        <h3>Abundance Abounds !</h3>
+        <p>Lettus show you few of the eddie bauers products at @redleafowrs loves to wear while working in his Tennessess vegitable garder, where his current harvest is almost beyond be-leaf. Roy received financial support from local skiers, community members, and friends to help with medical and rehabilitation costs that were not covered by his insurance, and he was able to hit the slopes again in 2008.</p>
+        <a href="">Follow Us On TikTok</a>
+    </div>
+</div>
+
+
+<!-- -----footer----- -->
+
+<div id="footermain">   
+<div class="top">
+    <img src="https://cdn-icons-png.flaticon.com/512/0/619.png" alt="">
+    <div>
+        <h4>STORE LOCATOR</h4>
+        <p>Find one of over 250 Eddie Bauer stores in north america</p>
+    </div>
+    <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-bell-512.png" alt="">
+    <div >
+        <h4>ADVENTURE REWARDS</h4>
+        <p>Earn points on every purchase. Sign up today for 500 points towards your first reward!</p>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/5481/5481993.png" alt="">
+    <div >
+        <h4>VISION STATEMENT</h4>
+        <p>Find one of over 250 Eddie Bauer stores in north america</p>
+    </div>
+</div>
+<hr>
+<div class="mid">
+<div>
+    <h4>HELP</h4>
+    <ul>
+        <li>Customer Service</li>
+        <li>Track Your Order</li>
+        <li>Return Policy</li>
+        <li>Start A Return</li>
+        <li>Shipping</li>
+        <li>Payment Options</li>
+        <li>Contact Us</li>
+    </ul>
+</div>
+<div>
+    <h4>SHOPPING</h4>
+    <ul>
+        <li>Sign in/Register</li>
+        <li>Adventure Rewards</li>
+        <li>Buy Gift Cards</li>
+        <li>Promos And Coupons</li>
+        <li>Find Your Fit</li>
+        <li>Price Match Policy</li>
+    </ul>
+</div>
+<div>
+    <h4>EB CREDIT CARD</h4>
+    <ul>
+        <li>Apply Now</li>
+        <li>Pay My Bill</li>
+    </ul>
+    <h4>VISIT A STORE</h4>
+    <ul>
+        <li>Store Location</li>
+    </ul>
+</div>
+<div>
+    <h4>(RE)ADVENTURE</h4>
+    <ul>
+        <li>About</li>
+        <li>Resale</li>
+    </ul>
+</div>
+<div>
+    <h4>About US</h4>
+    <ul>
+        <li>Our Story</li>
+        <li>Careers</li>
+        <li>Land Acknowledgement</li>
+        <li>Privacy Policy</li>
+        <li>CA Supply Chain</li>
+        <li>Act</li>
+        <li>Do Not Sell & CPP</li>
+        <li>Do Not Contact Me</li>
+        <li>Accesibility Statement</li>
+    </ul>
+</div>
+<div>
+    <h4>BE THE FIRST TO Know</h4>
+    <ul>
+        <li>Earn rewards and be the first to hear about sales
+            and special offers.</li>
+    </ul>
+    <button>SIGN UP</button><br><br>
+    <div>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-youtube"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-pinterest-p"></i>
+    <i class="fa-brands fa-twitter"></i>
+</div>
+</div>
+</div>
+<hr>
+<div class="base">
+    <div>
+        <p>SHOP</p>
+        <img src="https://img.freepik.com/free-icon/united-states-america_318-452242.jpg" alt="">
+        <img src="https://thumbs.dreamstime.com/b/white-maple-leaf-red-background-symbol-canada-emblem-canadian-maple-leaf-depicted-flag-canada-234581218.jpg" alt="">
+        <h5>WearWhat</h5>
+    </div>
+    <div>
+        <p>Session ID #813 667 912</p>
+        <p>© 2023 Eddie Bauer LLC. All Rights Reserved</p>
+    </div>
+    <div>
+        <p>Terms of Use
+            | Sitemap</p>
+    </div>
+    </div>
+</div>
+</body>
+<script>
+
+</script>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+          #nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        text-align: center;
+        background-color: #333333;
+        color: white;  
+    }
+    .left{
+         display: flex;
+         width: 20%;
+         margin-left: 10px;
+         align-items: center;
+    
+    }
+    .left i{
+        margin-right: 10px;
+    }
+    .middle{
+        width: 50%;
+        display: flex;
+       align-items: center;
+       font-family:Arial, Helvetica, sans-serif;
+       font-weight: 400;    
+    }
+    .right{
+         display: flex;
+         width: 20%;
+         align-items: center;     
+    }
+    .left>img{
+        width: 20px;  
+    }
+   
+    .right>a>img{
+        width: 20px;
+      background-color: white;
+    }
+   .right a{
+        display: flex;
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+        
+    }
+   .right i{
+        margin-right: 10px;
+    }
+
+    #nav2{
+        /* position: fixed; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 5px;
+
+    }
+    
+    #nav2>div>img{
+        width: 400px; 
+        margin-right: 120px;   
+       
+    }
+    #nav2>div>button{
+
+        width: 50px;
+        background: none;
+        border: none;
+        
+    }
+    .bag a{
+    color: black;
+    margin-right: 10px;
+   }
+  
+    #nav3 div{
+        display: flex;
+       justify-content: space-evenly;
+       margin-left: 40px;
+       margin-right: 40px;
+    }
+    #nav3 div select{
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+    }
+    #nav3 div select option{
+     width: 400px;
+     box-sizing: border-box;
+     background-color:White;
+    }
+
+    #nav3 a{
+        color: black;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+    #signup{
+        width: 40%;
+        height: 380px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+       margin: auto;
+       margin-top: 20px;
+       border-radius: 2%;
+       padding: 10px;
+       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;       
+       }
+
+
+    #signup form{
+        /* border: 1px solid black; */
+        text-align: center;
+        
+        
+    }
+    #signup form input{
+        padding: 8px;
+    }
+    #sub{
+        width: 100px;
+        background-color: #333333;
+        color:white;
+        border: 1px solid black;
+    }
+    #sub:hover{
+        border: 1px solid black;
+        background: none;
+        color: black;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav">
+            <div class="left">
+                <i class="fa-solid fa-bell"></i>
+                <p>Earn Rewards On Purchase</p>
+                </div>
+                <div class="middle">
+                <p>LIMITED TIME! 40% OFF - PRESIDENTS' DAY SALE VIEW ALL OFFERS ></p>
+                </div>
+                <div class="right">
+                    <a href=""><i class="fa-sharp fa-solid fa-location-dot"></i> Stores</a>
+                    <a href="./signin.html"><i class="fa-solid fa-user"></i> <span> Sign In</span></a>
+                    <span> /</span>
+                    <a href="./signUp.html"><span>Sing Up</span></a>
+                    
+                  
+                </div>
+            </div>
+            <div id="nav2">
+            
+                <div><input type="text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+                <!-- <button><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button> -->
+               <div><img src="C:\Users\vaish\Downloads\Untitled design (1).png" alt=""></div> 
+               <div class="bag"><a href="./cart.html"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a></div>
+            </div>
+            
+            <div id="nav3">
+                <div>
+
+                <a href="./products.html">WOMEN</a>
+                <a href="">MEN</a>
+                <a href="">KIDS</a>
+                <a href="">OUTWEAR</a>
+                <a href="">GEAR</a>
+                <a href="">FOOTWEAR</a>
+                <a href="">HOME</a>
+                <a href="">40% OFF SALE</a>
+                <a href="">CLEARANCE</a>
+                <a href="">RESALE</a>
+                <a href="">GUIDEPOST</a>
+               
+            </div>
+        </div>
+        </div>
+    
+  <!-- <div class="nav">
+    <a href="./index.html">Signup</a>
+    <a href="./signin.html">Signin</a>
+  </div> -->
+  <div id="signup">
+    <h1>Sign Up</h1>
+    <p>Please Enter Your Details</p>
+    <form>
+      <input type="text" id="firstname" placeholder="First Name" size="40"><br><br>
+      <input type="text" id="lastname" placeholder="Last Name" size="40"><br><br>
+      <input type="email" id="email" placeholder="Email" size="40"><br><br>
+      <input type="password"  id="password" placeholder=" Create Password" size="40"><br><br>
+      <input type="submit" id="sub" value="Submit" />
+    </form>
+  </div>
+</body>
+<script>
+  
+let LsData= JSON.parse(localStorage.getItem("account-data")) || [];
+
+let myForm=document.querySelector("form");
+let FirstName=document.getElementById("firstname");
+let LastName=document.getElementById("lastname");
+let Email=document.getElementById("email");
+let Password=document.getElementById("password");
+
+myForm.addEventListener("submit", formdata)
+
+function formdata(e){
+e.preventDefault();
+window.location.href="./signin.html"
+
+let obj={
+  firstname:FirstName.value,
+  lastname:LastName.value,
+  email:Email.value,
+  password: Password.value
+}
+
+LsData.push(obj)
+localStorage.setItem("account-data", JSON.stringify(LsData))
+}
+
+
+console.log(LsData)
+</script>
+
+</html>
