@@ -101,6 +101,12 @@
      box-sizing: border-box;
      background-color:White;
     }
+    #nav3 a{
+        color: black;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
     #footermain{
     width: 100%;
 background-color: #f5f5f5;
@@ -245,6 +251,11 @@ margin-top: 20px;
         width: 80%;
 
     }
+#filter{
+    padding: 5px;
+    margin-top: 20px;
+    border: none;
+}
 
     </style>
 </head>
@@ -278,78 +289,17 @@ margin-top: 20px;
             <div id="nav3">
                 <div>
     
-                <select name="" id="">
-                    <option value="">NEW!</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">WOMEN</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">MEN</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">KIDS</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">OUTERWEAR</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">GEAR</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">FOOTWEAR</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">HOME</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">SALE</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">CLEARANCE</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">RESALE</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">GUIDEPOST</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
+                    <a href="./products.html">WOMEN</a>
+                    <a href="">MEN</a>
+                    <a href="">KIDS</a>
+                    <a href="">OUTWEAR</a>
+                    <a href="">GEAR</a>
+                    <a href="">FOOTWEAR</a>
+                    <a href="">HOME</a>
+                    <a href="">40% OFF SALE</a>
+                    <a href="">CLEARANCE</a>
+                    <a href="">RESALE</a>
+                    <a href="">GUIDEPOST</a>
             </div>
         </div>
         </div>
@@ -364,12 +314,11 @@ margin-top: 20px;
     <option value="Shirt">Shirt</option>
     <option value="Hoodie">Hoodie</option>
     <option value="Tank Tops">Tank Tops</option>
-    <option value="Sweaters">Sweaters</option>
 </select>
 </div>
 </div>
 <div id="product-cont">
-<!-- -----Append Here---- -->
+<!-- -----Append Here---- --> 
 </div>
 <div id="footermain">   
     <div class="top">
@@ -385,7 +334,7 @@ margin-top: 20px;
         </div>
         <img src="https://cdn-icons-png.flaticon.com/512/5481/5481993.png" alt="">
         <div >
-            <h4>VISION STATEMENT</h4>
+            <h4>VISION STATEMENT</h4> 
             <p>Find one of over 250 Eddie Bauer stores in north america</p>
         </div>
     </div>
@@ -486,11 +435,14 @@ margin-top: 20px;
 <script>
 const APIURL="https://63f72c90e40e087c9588c8ee.mockapi.io/products"
 
+let fdata=[]; 
+
 async function fetchData(){
     try{
 let res= await fetch(APIURL)
 let data= await res.json();
-displayData(data)
+fdata=data
+displayData(fdata)
     }
     catch(error){
     console.log("error")
@@ -502,22 +454,19 @@ fetchData()
 let filterby=document.getElementById("filter")
 
 filterby.addEventListener("change",()=>{
-        fetchData();
+       
+    if(filterby.value===""){
+        displayData(fdata)
+    }
+    else{
+        let filtered=fdata.filter((ele)=>{
+            return ele.title===filterby.value
+        })
+        displayData(filtered)
+    }
       })
 
-      function filterData(data)
-      {
-        if(filterby.value===""){
-          displayData(data);
-
-        }
-        else{
-          data=data.filter((ele)=>{
-            return ele.title==filterby.value;
-          })
-          displayData(data);
-        }
-      }
+      
 
 let commerce=JSON.parse(localStorage.getItem("cloths"))
 

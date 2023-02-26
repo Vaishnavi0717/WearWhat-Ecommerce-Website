@@ -71,9 +71,13 @@
     
     #nav2>div>img{
         width: 400px; 
-        margin-right: 70px;   
+        margin-right: 120px;   
        
     }
+    .bag a{
+    color: black;
+    margin-right: 10px;
+   }
     #nav2>div>button{
 
         width: 50px;
@@ -101,6 +105,12 @@
      width: 400px;
      box-sizing: border-box;
      background-color:White;
+    }
+    #nav3 a{
+        color: black;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
     }
     #footermain{
     width: 100%;
@@ -218,9 +228,80 @@ margin-top: 20px;
     button:hover{
         cursor: pointer;
     }
-    img{
-        width: 30%;
+
+    #individual-cont{
+        display: flex;
+        height: 450px;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;  
     }
+    #individual-cont>div:nth-child(2){
+        width: 50%;
+        border-radius: 8px;
+        margin-left: 30px;
+        padding: 10px;
+        
+    }
+    #individual-cont>div:nth-child(1)>img{
+       width: 400px;
+       transition: transform .2s;
+    }
+    /* #individual-cont>div:nth-child(1)>img:hover{
+      
+    } */
+
+    #individual-cont>div>h3{
+        font-size: x-large;
+    }
+    #individual-cont>div>button{
+    background-color: #333333;
+        color: white;
+       margin: 8px;
+       margin-left: 10px;
+       padding: 10px;
+       margin-bottom: 0;
+       padding-left: 30px;
+       padding-right: 30px;
+       font-weight: 500;
+       border: 1px solid black;
+}
+#individual-cont>div>button:hover{
+        background-color: white;
+        color: black;
+    }
+#info{
+    display: flex;
+     width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;  
+
+}
+
+#info>div{
+    width: 30%;
+    text-align: center;
+}
+#info>div>img{
+    width: 30%;
+    text-align: center;
+}
+#pro-dis{
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+font-family: Arial, Helvetica, sans-serif;     
+    
+
+}
+#pro-dis>div>p, li{
+    color: gray;
+    font-size: small;
+}
+#pro-dis>div{
+    width: 40%;
+}
+
     </style>
 </head>
 <body>
@@ -247,13 +328,12 @@ margin-top: 20px;
                 <div><input type="text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
                 <!-- <button><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button> -->
                <div><img src="C:\Users\vaish\Downloads\Untitled design (1).png" alt=""></div> 
-               <div class="bag"><button><i class="fa-sharp fa-solid fa-bag-shopping"></i></button></div>
+               <div class="bag"><a href="./cart.html"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a></div>
             </div>
             
             <div id="nav3">
                 <div>
-                <!-- <a href="">NEW!</a>
-                <a href="">WOMEN</a>
+                <a href="./products.html">WOMEN</a>
                 <a href="">MEN</a>
                 <a href="">KIDS</a>
                 <a href="">OUTWEAR</a>
@@ -263,79 +343,8 @@ margin-top: 20px;
                 <a href="">40% OFF SALE</a>
                 <a href="">CLEARANCE</a>
                 <a href="">RESALE</a>
-                <a href="">GUIDEPOST</a> -->
-                <select name="" id="">
-                    <option value="">NEW!</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">WOMEN</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">MEN</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">KIDS</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">OUTERWEAR</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">GEAR</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">FOOTWEAR</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">HOME</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">SALE</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">CLEARANCE</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">RESALE</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
-                <select name="" id="">
-                    <option value="">GUIDEPOST</option>
-                    <option value="">Shirts</option>
-                    <option value="">T-Shirts</option>
-                    <option value="">Boots</option>
-                </select>
+                <a href="">GUIDEPOST</a>
+               
             </div>
         </div>
         </div>
@@ -343,9 +352,60 @@ margin-top: 20px;
         <div id="individual-cont">
 
         </div>
+<hr>
+        <div id="info">
+         <div>
+            <img src="https://eddiebauer.scene7.com/is/content/EddieBauer/FirstAscent?fmt=svg" alt="">
+            <p>First Ascent</p>
+         </div>
+         <div>
+            <img src="https://eddiebauer.scene7.com/is/content/EddieBauer/Breathable?fmt=svg" alt="">
+            <p>Breathable</p>
+         </div>
+         <div>
+            <img src="https://eddiebauer.scene7.com/is/content/EddieBauer/FourWayStretch?fmt=svg" alt="">
+            <p>4 Way Stretch</p>
+         </div>
+         <div>
+            <img src="https://eddiebauer.scene7.com/is/content/EddieBauer/SecurePocket?fmt=svg" alt="">
+            <p>Secure Pocket</p>
+         </div>
+        </div>
 
-    <!------- footer -------->
-        <!-- <div id="footermain">   
+<hr>
+
+<div id="pro-dis">
+<div>
+    <h4>PRODUCT DESCRIPTION</h4>
+    <p>The ultimate midlayer for outdoor adventures, this streamlined grid fleece pullover is the perfect combination of lightweight warmth and superior mobility. The four-way stretch fabric has a soft, grid-like texture on the interior that provides excellent air circulation during any activity.
+
+        Models shown are 5'9" to 5'11" tall, wearing size S/4, L/12, or XXL/18.</p>
+        <p>i31 792 4760</p>
+<br>
+        <h4>CARE</h4>
+        <p>Turn garment inside out. Machine wash cold, separately. Only non-chlorine bleach as needed. Do not use fabric softeners. Tumble dry low. Do not iron. Do not dry clean</p>
+</div>
+<div>
+    <h4>FEATURES</h4>
+    <ul>
+        <li>FreeHeat® technology adds extra warmth on cold days</li>
+        <li>Breathable grid-texture interior</li>
+        <li>Raglan sleeves and four-way stretch for enhanced mobility</li>
+        <li>Open-entry side pockets: interior secure zip pocket</li>
+        <li>[Length] 25"</li>
+        <li>Active; Our most athletic fit. Close to the body without restricting mobility.</li>
+    </ul>
+<br>
+    <h4>MATERIALS</h4>
+    <ul>
+        <li>95% polyester, 5% spandex</li>
+        <li>Imported</li>
+    </ul>
+</div>
+</div>
+
+    <!-- -- ----- footer ------ -->
+    <div id="footermain">   
             <div class="top">
                 <img src="https://cdn-icons-png.flaticon.com/512/0/619.png" alt="">
                 <div>
@@ -453,8 +513,7 @@ margin-top: 20px;
                         | Sitemap</p>
                 </div>
                 </div>
-            </div> -->
-    
+            </div>
     
 </body>
 <script> 
@@ -465,21 +524,87 @@ margin-top: 20px;
 let xdata=[]
 
 xdata.push(commerce)
+
     function displayData(data){
         container.innerHTML=null;
         
          data.forEach((element)=>{
             let product=document.createElement("div");
+            let box1=document.createElement("div");
+            let box2=document.createElement("div")
 
             let Image=document.createElement("img");
       Image.setAttribute("src", element.image);
 
+      let Name=document.createElement("H3"); 
+      Name.textContent=element.name; 
+
+      let Price=document.createElement("h4"); 
+      Price.textContent=`$${element.price}  ⓘ`; 
+
+      let Rating=document.createElement("h5"); 
+      Rating.textContent="★★★✩✩ 3.0"
+
+      let Line=document.createElement("hr")
+
+      let Btn1=document.createElement("button");
+      Btn1.textContent="Regular";
+      let Btn2=document.createElement("button");
+      Btn2.textContent="Petite";
+      let Btn3=document.createElement("button");
+      Btn3.textContent="Tall";
+      let Btn4=document.createElement("button");
+      Btn4.textContent="Plus";
+
+      let Colour=document.createElement("h1");
+      Colour.textContent=" 🟣🟡🔵🟤⚪⚫";
+     
+
+      let Size1=document.createElement("button");
+      Size1.textContent="XS"
+      Size1.style.backgroundColor="white"; 
+      Size1.style.color="black"
+      let Size2=document.createElement("button");
+      Size2.textContent="S"
+      Size2.style.backgroundColor="white"; 
+      Size2.style.color="black"
+      let Size3=document.createElement("button");
+      Size3.textContent="M"
+      Size3.style.backgroundColor="white"; 
+      Size3.style.color="black"
+      let Size4=document.createElement("button");
+      Size4.textContent="L"
+      Size4.style.backgroundColor="white"; 
+      Size4.style.color="black"
+      let Size5=document.createElement("button");
+      Size5.textContent="XL"
+      Size5.style.backgroundColor="white"; 
+      Size5.style.color="black"
+      let Size6=document.createElement("button");
+      Size6.textContent="XXL"
+      Size6.style.backgroundColor="white"; 
+      Size6.style.color="black";
+
+     let Addtocart=document.createElement("button"); 
+      Addtocart.innerText="Add To Bag";
+      Addtocart.style.width="200px";
+      Addtocart.style.margin="40px"; 
+    
+      Addtocart.addEventListener("click", ()=>{
+       
+        localStorage.setItem("cloths", JSON.stringify(xdata));
+        window.location.href="./cart.html";
+        
+      })
 
 
 
 
+      
+     
+      box1.append(Name, Price, Rating, Line, Btn1, Btn2, Btn3, Btn4,Colour, Size1, Size2, Size3, Size4, Size5, Size6, Addtocart)
       product.append(Image)
-      container.append(product)
+      container.append(product, box1, box2)
        
         })
     }
