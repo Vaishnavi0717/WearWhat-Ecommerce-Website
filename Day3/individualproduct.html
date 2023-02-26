@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         #nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        text-align: center;
+        background-color: #333333;
+        color: white;  
+       
+    }
+    .left{
+         display: flex;
+         width: 20%;
+         margin-left: 10px;
+         align-items: center;
+    
+    }
+    .left i{
+        margin-right: 10px;
+    }
+    .middle{
+        width: 50%;
+        display: flex;
+       align-items: center;
+       font-family:Arial, Helvetica, sans-serif;
+       font-weight: 400;    
+    }
+    .right{
+         display: flex;
+         width: 20%;
+         align-items: center;     
+    }
+    .left>img{
+        width: 20px;  
+    }
+   
+    .right>a>img{
+        width: 20px;
+      background-color: white;
+    }
+   .right a{
+        display: flex;
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+        
+    }
+   .right i{
+        margin-right: 10px;
+    }
+
+    #nav2{
+        /* position: fixed; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 5px;
+
+    }
+    
+    #nav2>div>img{
+        width: 400px; 
+        margin-right: 120px;   
+       
+    }
+    .bag a{
+    color: black;
+    margin-right: 10px;
+   }
+    #nav2>div>button{
+
+        width: 50px;
+        background: none;
+        border: none;
+        
+    }
+    #nav3 div{
+        display: flex;
+       justify-content: space-evenly;
+       margin-left: 40px;
+       margin-right: 40px;
+    }
+    #nav3 div select{
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+    }
+    #nav3 div select option{
+     width: 400px;
+     box-sizing: border-box;
+     background-color:White;
+    }
+    #nav3 a{
+        color: black;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+    #footermain{
+    width: 100%;
+background-color: #f5f5f5;
+margin-top: 20px;
+
+   }
+   
+.top{
+   width: 100%;
+    display: flex;
+    margin-right: 60px;
+    justify-content: space-around;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.top>div{
+    width: 20%;
+   margin-right: 50px;
+    justify-content: center;
+    line-height: 20px;
+
+    
+}
+.top>div>p{
+    color: grey;
+    font-size: small;
+}
+.top>div>h4{
+    font-size: small;
+    line-height: 15px;
+}
+
+.top>img{
+   
+    padding-top:50px; 
+    max-height: 40px;
+    padding-left:90px;  
+    padding-right: 10px;
+}
+
+.mid{
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 270px;
+
+}
+
+.mid>div{
+     display:inline-block;
+    line-height: 20px;
+}
+.mid>div>ul{
+    list-style-type: none;
+    color: gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+.mid>div>h4{
+ margin-left: 40px;
+ font-size: small;
+}
+.mid>div>div{
+    margin-left: 40px;
+}
+.mid>div>button{
+    background-color: #333333;
+        color: white;
+       margin: 10px;
+       margin-left: 40px;
+       padding: 12px;
+       margin-bottom: 0;
+       padding-left: 40px;
+       padding-right: 40px;
+       font-weight: 500;
+       border: 1px solid black;
+}
+.mid>div>button:hover{
+        background-color: white;
+        color: black;
+    }
+    hr{
+        width: 90%;
+        color: darkgray;
+    }
+
+    .base{ 
+        display: flex;
+       justify-content: space-between;
+    }
+    .base>div{
+        width: 20%;
+        height: 20px;
+        display: flex;
+       align-items: center;
+        margin-left: 40px;
+       padding: 20px;
+        
+    }
+    .base>div>img{
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        
+    }
+    .base>div>h5{
+        font-family: 'Pacifico';
+        margin-left:10px;
+        
+    }
+    .base>div>p{
+        color: gray;
+        font-size: small;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+
+    #individual-cont{
+        display: flex;
+        height: 450px;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;  
+    }
+    #individual-cont>div:nth-child(2){
+        width: 50%;
+        border-radius: 8px;
+        margin-left: 30px;
+        padding: 10px;
+        
+    }
+    #individual-cont>div:nth-child(1)>img{
+       width: 400px;
+       transition: transform .2s;
+    }
+    /* #individual-cont>div:nth-child(1)>img:hover{
+      
+    } */
+
+    #individual-cont>div>h3{
+        font-size: x-large;
+    }
+    #individual-cont>div>button{
+    background-color: #333333;
+        color: white;
+       margin: 8px;
+       margin-left: 10px;
+       padding: 10px;
+       margin-bottom: 0;
+       padding-left: 30px;
+       padding-right: 30px;
+       font-weight: 500;
+       border: 1px solid black;
+}
+#individual-cont>div>button:hover{
+        background-color: white;
+        color: black;
+    }
+#info{
+    display: flex;
+     width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;  
+
+}
+
+#info>div{
+    width: 30%;
+    text-align: center;
+}
+#info>div>img{
+    width: 30%;
+    text-align: center;
+}
+#pro-dis{
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+font-family: Arial, Helvetica, sans-serif;     
+    
+
+}
+#pro-dis>div>p, li{
+    color: gray;
+    font-size: small;
+}
+#pro-dis>div{
+    width: 40%;
+}
+
+    </style>
+</head>
+<body>
+
+    <!------ NavBar ------->
+    <div id="main">
+        <div id="nav">
+            <div class="left">
+                <i class="fa-solid fa-bell"></i>
+                <p>Earn Rewards On Purchase</p>
+                </div>
+                <div class="middle">
+                <p>LIMITED TIME! 40% OFF - PRESIDENTS' DAY SALE VIEW ALL OFFERS ></p>
+                </div>
+                <div class="right">
+                    <a href=""><i class="fa-sharp fa-solid fa-location-dot"></i> Stores</a>
+                    <a href="./signin.html"><i class="fa-solid fa-user"></i> <span> Sign In</span></a>
+                    <span> /</span>
+                    <a href="./signUp.html"><span>Sing Up</span></a>  
+                </div>
+            </div>
+            <div id="nav2">
+            
+                <div><input type="text"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
+                <!-- <button><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button> -->
+               <div><img src="C:\Users\vaish\Downloads\Untitled design (1).png" alt=""></div> 
+               <div class="bag"><a href="./cart.html"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a></div>
+            </div>
+            
+            <div id="nav3">
+                <div>
+                <a href="./products.html">WOMEN</a>
+                <a href="">MEN</a>
+                <a href="">KIDS</a>
+                <a href="">OUTWEAR</a>
+                <a href="">GEAR</a>
+                <a href="">FOOTWEAR</a>
+                <a href="">HOME</a>
+                <a href="">40% OFF SALE</a>
+                <a href="">CLEARANCE</a>
+                <a href="">RESALE</a>
+                <a href="">GUIDEPOST</a>
+               
+            </div>
+        </div>
+        </div>
+
+        <div id="individual-cont">
+
+        </div>
+<hr>
+        <div id="info">
+         <div>
+            <img src="https://eddiebauer.scene7.com/is/content/EddieBauer/FirstAscent?fmt=svg" alt="">
+            <p>First Ascent</p>
+         </div>
+         <div>
+            <img src="https://eddiebauer.scene7.com/is/content/EddieBauer/Breathable?fmt=svg" alt="">
+            <p>Breathable</p>
+         </div>
+         <div>
+            <img src="https://eddiebauer.scene7.com/is/content/EddieBauer/FourWayStretch?fmt=svg" alt="">
+            <p>4 Way Stretch</p>
+         </div>
+         <div>
+            <img src="https://eddiebauer.scene7.com/is/content/EddieBauer/SecurePocket?fmt=svg" alt="">
+            <p>Secure Pocket</p>
+         </div>
+        </div>
+
+<hr>
+
+<div id="pro-dis">
+<div>
+    <h4>PRODUCT DESCRIPTION</h4>
+    <p>The ultimate midlayer for outdoor adventures, this streamlined grid fleece pullover is the perfect combination of lightweight warmth and superior mobility. The four-way stretch fabric has a soft, grid-like texture on the interior that provides excellent air circulation during any activity.
+
+        Models shown are 5'9" to 5'11" tall, wearing size S/4, L/12, or XXL/18.</p>
+        <p>i31 792 4760</p>
+<br>
+        <h4>CARE</h4>
+        <p>Turn garment inside out. Machine wash cold, separately. Only non-chlorine bleach as needed. Do not use fabric softeners. Tumble dry low. Do not iron. Do not dry clean</p>
+</div>
+<div>
+    <h4>FEATURES</h4>
+    <ul>
+        <li>FreeHeat® technology adds extra warmth on cold days</li>
+        <li>Breathable grid-texture interior</li>
+        <li>Raglan sleeves and four-way stretch for enhanced mobility</li>
+        <li>Open-entry side pockets: interior secure zip pocket</li>
+        <li>[Length] 25"</li>
+        <li>Active; Our most athletic fit. Close to the body without restricting mobility.</li>
+    </ul>
+<br>
+    <h4>MATERIALS</h4>
+    <ul>
+        <li>95% polyester, 5% spandex</li>
+        <li>Imported</li>
+    </ul>
+</div>
+</div>
+
+    <!-- -- ----- footer ------ -->
+    <div id="footermain">   
+            <div class="top">
+                <img src="https://cdn-icons-png.flaticon.com/512/0/619.png" alt="">
+                <div>
+                    <h4>STORE LOCATOR</h4>
+                    <p>Find one of over 250 Eddie Bauer stores in north america</p>
+                </div>
+                <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-bell-512.png" alt="">
+                <div >
+                    <h4>ADVENTURE REWARDS</h4>
+                    <p>Earn points on every purchase. Sign up today for 500 points towards your first reward!</p>
+                </div>
+                <img src="https://cdn-icons-png.flaticon.com/512/5481/5481993.png" alt="">
+                <div >
+                    <h4>VISION STATEMENT</h4>
+                    <p>Find one of over 250 Eddie Bauer stores in north america</p>
+                </div>
+            </div>
+            <hr>
+            <div class="mid">
+            <div>
+                <h4>HELP</h4>
+                <ul>
+                    <li>Customer Service</li>
+                    <li>Track Your Order</li>
+                    <li>Return Policy</li>
+                    <li>Start A Return</li>
+                    <li>Shipping</li>
+                    <li>Payment Options</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div>
+                <h4>SHOPPING</h4>
+                <ul>
+                    <li>Sign in/Register</li>
+                    <li>Adventure Rewards</li>
+                    <li>Buy Gift Cards</li>
+                    <li>Promos And Coupons</li>
+                    <li>Find Your Fit</li>
+                    <li>Price Match Policy</li>
+                </ul>
+            </div>
+            <div>
+                <h4>EB CREDIT CARD</h4>
+                <ul>
+                    <li>Apply Now</li>
+                    <li>Pay My Bill</li>
+                </ul>
+                <h4>VISIT A STORE</h4>
+                <ul>
+                    <li>Store Location</li>
+                </ul>
+            </div>
+            <div>
+                <h4>(RE)ADVENTURE</h4>
+                <ul>
+                    <li>About</li>
+                    <li>Resale</li>
+                </ul>
+            </div>
+            <div>
+                <h4>About US</h4>
+                <ul>
+                    <li>Our Story</li>
+                    <li>Careers</li>
+                    <li>Land Acknowledgement</li>
+                    <li>Privacy Policy</li>
+                    <li>CA Supply Chain</li>
+                    <li>Act</li>
+                    <li>Do Not Sell & CPP</li>
+                    <li>Do Not Contact Me</li>
+                    <li>Accesibility Statement</li>
+                </ul>
+            </div>
+            <div>
+                <h4>BE THE FIRST TO Know</h4>
+                <ul>
+                    <li>Earn rewards and be the first to hear about sales
+                        and special offers.</li>
+                </ul>
+                <button>SIGN UP</button><br><br>
+                <div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            </div>
+            </div>
+            <hr>
+            <div class="base">
+                <div>
+                    <p>SHOP</p>
+                    <img src="https://img.freepik.com/free-icon/united-states-america_318-452242.jpg" alt="">
+                    <img src="https://thumbs.dreamstime.com/b/white-maple-leaf-red-background-symbol-canada-emblem-canadian-maple-leaf-depicted-flag-canada-234581218.jpg" alt="">
+                    <h5>WearWhat</h5>
+                </div>
+                <div>
+                    <p>Session ID #813 667 912</p>
+                    <p>© 2023 Eddie Bauer LLC. All Rights Reserved</p>
+                </div>
+                <div>
+                    <p>Terms of Use
+                        | Sitemap</p>
+                </div>
+                </div>
+            </div>
+    
+</body>
+<script> 
+    let commerce=JSON.parse(localStorage.getItem("cloths")) || [];
+    let container=document.getElementById("individual-cont");
+
+// console.log(commerce)
+let xdata=[]
+
+xdata.push(commerce)
+
+    function displayData(data){
+        container.innerHTML=null;
+        
+         data.forEach((element)=>{
+            let product=document.createElement("div");
+            let box1=document.createElement("div");
+            let box2=document.createElement("div")
+
+            let Image=document.createElement("img");
+      Image.setAttribute("src", element.image);
+
+      let Name=document.createElement("H3"); 
+      Name.textContent=element.name; 
+
+      let Price=document.createElement("h4"); 
+      Price.textContent=`$${element.price}  ⓘ`; 
+
+      let Rating=document.createElement("h5"); 
+      Rating.textContent="★★★✩✩ 3.0"
+
+      let Line=document.createElement("hr")
+
+      let Btn1=document.createElement("button");
+      Btn1.textContent="Regular";
+      let Btn2=document.createElement("button");
+      Btn2.textContent="Petite";
+      let Btn3=document.createElement("button");
+      Btn3.textContent="Tall";
+      let Btn4=document.createElement("button");
+      Btn4.textContent="Plus";
+
+      let Colour=document.createElement("h1");
+      Colour.textContent=" 🟣🟡🔵🟤⚪⚫";
+     
+
+      let Size1=document.createElement("button");
+      Size1.textContent="XS"
+      Size1.style.backgroundColor="white"; 
+      Size1.style.color="black"
+      let Size2=document.createElement("button");
+      Size2.textContent="S"
+      Size2.style.backgroundColor="white"; 
+      Size2.style.color="black"
+      let Size3=document.createElement("button");
+      Size3.textContent="M"
+      Size3.style.backgroundColor="white"; 
+      Size3.style.color="black"
+      let Size4=document.createElement("button");
+      Size4.textContent="L"
+      Size4.style.backgroundColor="white"; 
+      Size4.style.color="black"
+      let Size5=document.createElement("button");
+      Size5.textContent="XL"
+      Size5.style.backgroundColor="white"; 
+      Size5.style.color="black"
+      let Size6=document.createElement("button");
+      Size6.textContent="XXL"
+      Size6.style.backgroundColor="white"; 
+      Size6.style.color="black";
+
+     let Addtocart=document.createElement("button"); 
+      Addtocart.innerText="Add To Bag";
+      Addtocart.style.width="200px";
+      Addtocart.style.margin="40px"; 
+    
+      Addtocart.addEventListener("click", ()=>{
+       
+        localStorage.setItem("cloths", JSON.stringify(xdata));
+        window.location.href="./cart.html";
+        
+      })
+
+
+
+
+      
+     
+      box1.append(Name, Price, Rating, Line, Btn1, Btn2, Btn3, Btn4,Colour, Size1, Size2, Size3, Size4, Size5, Size6, Addtocart)
+      product.append(Image)
+      container.append(product, box1, box2)
+       
+        })
+    }
+    displayData(xdata);
+</script>
+</html>
